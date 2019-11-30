@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filmak SYSTEM "../dtd/filmak.dtd">
+<filmak>
+  <filma izenburua="">
+    <data></data>
+    <zuzendaria></zuzendaria>
+    <generoa></generoa>
+    <iraupena></iraupena>
+    <sinopsia></sinopsia>
+    <IMDB></IMDB>
+    <esteka></esteka>
+  </filma>
+</filmak>
