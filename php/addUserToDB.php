@@ -1,6 +1,5 @@
 <?php
   include "../php/navbar.php";
-  include "../php/DbConfig.php";
   $konexioa = @mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) or die ("<php class='text-danger>Errorea: ezin izan da konexioa ezarri</p>");
   $query = "SELECT * FROM Users WHERE eposta = '". $_POST["eposta"] ."';";
   $emaitza= @ mysqli_query($konexioa,$query);
