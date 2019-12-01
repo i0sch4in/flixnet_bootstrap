@@ -8,17 +8,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.0/jquery.validate.min.js"></script>
+    <link rel="icon" href="../img/netflix-icon.svg">
     <title>FlixNet</title>
     <?php include "../php/DbConfig.php"?>
   </head>
-  <div class="jumbotron bg-dark text-danger">
-    <div class="display-1">
-      <p class="text-center">FlixNet</p>
+  <div class="jumbotron bg-dark">
+    <div class="img-container">
+      <img class="img-responsive" src="../img/netflix-seeklogo.svg" alt="netflix-title" height="200">
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container col-md-9">
-
-        <ul class="navbar-nav mr-auto text">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
@@ -31,13 +31,13 @@
           <li class="nav-item">
             <a class="nav-link" href="../php/logout.php">Logout</a>
           </li>
+          <li class="nav-item dropdown ml-auto">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-expanded="false"> Ongi etorri, anonymous </a>
+            <div id="dropdownOptions" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <a href="../php/login.php" class="dropdown-item">Sesioa hasi</a>
+            </div>
+          </li>
         </ul>
-      </div>
-      <div class="container col-md-3">
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Bilatu pelikula katalogoan" aria-label="Bilatu">
-        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Bilatu</button>
-      </form>
-      </div>
     </nav>
   </div>
