@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <?php include "../php/navbar.php" ?>
+<?php include "../php/navbar.php" ?>
     <div class="container align-items-center">
-      <form id="registerForm" action="../php/addUserToDB.php">
+      <form id="registerForm" action="../php/addUserToDB.php" method="POST">
         <div class="form-group">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -43,7 +40,7 @@
               <input type="password" name="pwd2" id="pwd2" class="form-control password" placeholder="Errepikatu pasahitza">
             </div>
           </div>
-        <button type="button" id="bidali" class="btn btn-danger" disabled>Bidali</button>
+        <button type="sumbit" id="bidali" class="btn btn-danger" disabled>Bidali</button>
       </form>
       <div id="mezua">
       </div>
