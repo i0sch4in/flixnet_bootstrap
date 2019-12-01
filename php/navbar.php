@@ -11,33 +11,48 @@
     <link rel="icon" href="../img/netflix-icon.svg">
     <title>FlixNet</title>
     <?php include "../php/DbConfig.php"?>
+
   </head>
   <div class="jumbotron bg-dark">
-    <div class="img-container">
+    <div class="row justify-content-center">
       <img class="img-responsive" src="../img/netflix-seeklogo.svg" alt="netflix-title" height="200">
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../php/register.php">Erregistratu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../php/login.php">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../php/logout.php">Logout</a>
-          </li>
-          <li class="nav-item dropdown ml-auto">
-            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-              aria-expanded="false"> Ongi etorri, anonymous </a>
-            <div id="dropdownOptions" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a href="../php/login.php" class="dropdown-item">Sesioa hasi</a>
-            </div>
-          </li>
-        </ul>
-    </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../php/register.php">Erregistratu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../php/login.php">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../php/logout.php">Logout</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-right">
+            <li class="nav-item dropdown ml-auto">
+              <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-expanded="false"> Ongi etorri, <span class="font-weight-bold"><?php
+                    if(isset($_SESSION['eposta'])){
+                      echo $_SESSION['eposta'];
+                    }
+                    else echo "Anonymous";
+                     ?> </span></a>
+              <div id="dropdownOptions" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <?php if(isset($_SESSION['eposta'])){
+                  echo '<a href="../php/logout.php" class="dropdown-item">Saioa itxi</a>';
+                }
+                else{
+                  echo '<a href="../php/login.php" class="dropdown-item">Saioa hasi</a>';
+                }
+                ?>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
   </div>
