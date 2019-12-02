@@ -3,22 +3,22 @@
 <filmak>
   <filma>
     <izenburua>The Joker</izenburua>
-    <data>2019/10/04</data>
+    <urtea>2019</urtea>
     <zuzendaria>Todd Phillips</zuzendaria>
     <generoa>Drama</generoa>
     <iraupena>121</iraupena>
     <sinopsia>In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.</sinopsia>
-    <balorazioa>8.7</balorazioa>
-    <esteka>https://www.youtube.com/watch?v=zAGVQLHvwOY</esteka>
+    <balorazioa>87</balorazioa>
+    <esteka>https://www.youtube.com/embed/zAGVQLHvwOY</esteka>
   </filma>
   <filma>
-    <izena>Space Jam</izena>
-    <data>1996/11/15</data>
+    <izenburua>Space Jam</izenburua>
+    <urtea>1996</urtea>
     <zuzendaria>Joe Pytka</zuzendaria>
     <generoa>Animation, Adventure, Comedy</generoa>
     <iraupena>88</iraupena>
     <sinopsia>In a desperate attempt to win a basketball match and earn their freedom, the Looney Tunes seek the aid of retired basketball champion, Michael Jordan.</sinopsia>
-    <balorazioa>6.4</balorazioa>
-    <esteka>https://www.youtube.com/watch?v=oKNy-MWjkcU</esteka>
+    <balorazioa>64</balorazioa>
+    <esteka>https://www.youtube.com/embed/oKNy-MWjkcU</esteka>
   </filma>
 </filmak>

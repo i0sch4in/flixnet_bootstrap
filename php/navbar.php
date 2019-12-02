@@ -31,6 +31,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="../php/login.php">Login</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../php/showFilms.php">Katalogoa ikusi</a>
+              </li>
             </ul>
             <ul class="navbar-nav navbar-right">
               <li class="nav-item dropdown ml-auto">

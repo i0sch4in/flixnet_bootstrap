@@ -1,10 +1,11 @@
-<!ELEMENT filmak (filma)*>
-<!ELEMENT filma(izenburua, data, zuzendaria, generoa, iraupena, sinopsia, balorazioa, esteka)>
+<!DOCTYPE filmak[
+<!ELEMENT filma (izenburua, data, zuzendaria, generoa, iraupena, sinopsia, balorazioa, esteka)>
 <!ELEMENT izenburua (#PCDATA)>
-<!ELEMENT data (#PCDATA)>
+<!ELEMENT urtea (#PCDATA)>
 <!ELEMENT zuzendaria (#PCDATA)>
 <!ELEMENT generoa (#PCDATA)>
 <!ELEMENT iraupena (#PCDATA)>
 <!ELEMENT sinopsia (#PCDATA)>
 <!ELEMENT balorazioa (#PCDATA)>
 <!ELEMENT esteka (#PCDATA)>
+]>
