@@ -1,5 +1,4 @@
 <?php
-include "../php/DbConfig.php";
 include "../php/navbar.php";
 $konexioa = @mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) or die ("Errorea: ezin izan da konexioa ezarri");
 $sql = "SELECT * FROM Users WHERE eposta = '". $_POST["eposta"] ."' AND pasahitza = '". $_POST["pwd"] ."';";

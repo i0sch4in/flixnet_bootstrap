@@ -1,6 +1,6 @@
 <!ELEMENT filmak (filma)*>
-<!ELEMENT filma(data, zuzendaria, generoa, iraupena, sinopsia, balorazioa,esteka)>
-<!ATTLIST filma izenburua CDATA #REQUIRED>
+<!ELEMENT filma(izenburua, data, zuzendaria, generoa, iraupena, sinopsia, balorazioa, esteka)>
+<!ELEMENT izenburua (#PCDATA)>
 <!ELEMENT data (#PCDATA)>
 <!ELEMENT zuzendaria (#PCDATA)>
 <!ELEMENT generoa (#PCDATA)>
