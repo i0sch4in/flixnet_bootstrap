@@ -12,7 +12,11 @@
     <link rel="icon" href="../img/netflix-icon.svg">
     <title>FlixNet</title>
     <?php include "../php/DbConfig.php"?>
-
+    <script>
+    $(document).ready(function(){ //irudiaren "arrastratzea" desaktibatzeko
+      $('img').on('dragstart', function(event) { event.preventDefault(); });
+    });
+    </script>
   </head>
   <body>
     <div class="jumbotron bg-dark">
@@ -22,7 +26,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-4">
           <div class="container">
             <ul class="navbar-nav">
-              <li class="nav-item active">
+              <!-- <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
@@ -30,7 +34,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../php/login.php">Login</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="../php/showFilms.php">Katalogoa ikusi</a>
               </li>
@@ -38,7 +42,7 @@
             <ul class="navbar-nav navbar-right">
               <li class="nav-item dropdown ml-auto">
                 <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                  aria-expanded="false"> Ongi etorri, <span class="font-weight-bold"><?php
+                  aria-expanded="false"> Ongi etorri, <span class="font-weight-bold" id="userName"><?php
                       if(isset($_SESSION['eposta'])){
                         echo $_SESSION['eposta'];
                       }

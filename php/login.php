@@ -1,6 +1,6 @@
 <?php include "../php/navbar.php" ?>
     <div class="container align-items-center">
-      <form action="../php/checkUserFromDB.php" method="POST">
+      <form>
         <div class="form-group">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -17,11 +17,29 @@
             <input type="password" name="pwd" id="pwd" class="form-control">
           </div>
         </div>
-        <button type="submit" id="bidali" class="btn btn-danger">Bidali</button>
+        <button type="button" id="bidali" class="btn btn-danger">Bidali</button>
       </form>
       <div id="mezua">
 
       </div>
     </div>
+    <script>
+      $("#bidali").click(function(){
+        $.ajax({
+            method: "POST",
+            url: "../php/checkUserFromDB.php",
+            cache: false,
+            data: {eposta: $('#eposta').val(), pwd: $('#pwd').val()},
+            success: function(email){
+              if(email==""){
+                $('#mezua').html("<p class='text-danger'><span class='font-weight-bold'>ERROREA: </span>Erabiltzailea eta pasahitza ez datoz bat.</p>");
+              }
+              else{
+                window.location.replace("../php/successLogin.php?eposta="+email);
+              }
+            }
+          });
+      })
+    </script>
   </body>
 </html>
