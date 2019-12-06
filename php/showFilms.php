@@ -28,12 +28,14 @@ include "../php/navbar.php";
               html += "</div></div>";
               html += "<div class='row'>";
               html += "<p>" + $(this).find("sinopsia").text() + "</p>";
-              html += "</div></div><hr>";
+              html += "</div>";
+              html += "<div class='row'>";
+              html += "<div class='container'> <p class='font-italic text-secondary'>By " + $(this).find("egilea").text() + "</p> </div>";
+              html += "</div></div>";
               $("#content").append(html);
             })
           }
       });
     });
     </script>
-  </body>
-</html>
+<?php include "../php/footer.php" ?>

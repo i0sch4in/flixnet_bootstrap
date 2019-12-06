@@ -3,6 +3,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -12,11 +14,10 @@
     <link rel="icon" href="../img/netflix-icon.svg">
     <title>FlixNet</title>
     <?php include "../php/DbConfig.php"?>
-    <script>
-    $(document).ready(function(){ //irudiaren "arrastratzea" desaktibatzeko
+    <!-- <script>
+    //irudiaren "arrastratzea" desaktibatzeko
       $('img').on('dragstart', function(event) { event.preventDefault(); });
-    });
-    </script>
+    </script> -->
   </head>
   <body>
     <div class="jumbotron bg-dark">
@@ -31,13 +32,15 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../php/register.php">Erregistratu</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../php/login.php">Login</a>
               </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="../php/showFilms.php">Katalogoa ikusi</a>
               </li>
+              <?php if(isset($_SESSION['eposta'])){ ?>
+              <li class="nav-item">
+                <a class="nav-link" href="../php/addFilm.php">Pelikula sartu</a>
+              </li>
+              <?php } ?>
             </ul>
             <ul class="navbar-nav navbar-right">
               <li class="nav-item dropdown ml-auto">
@@ -49,13 +52,14 @@
                       else echo "Anonymous";
                        ?> </span></a>
                 <div id="dropdownOptions" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <?php if(isset($_SESSION['eposta'])){
-                    echo '<a href="../php/logout.php" class="dropdown-item" id="logout">Saioa itxi</a>';
-                  }
-                  else{
-                    echo '<a href="../php/login.php" class="dropdown-item">Saioa hasi</a>';
-                  }
-                  ?>
+                  <?php if(isset($_SESSION['eposta'])){?>
+                    <a href="../php/showOwnFilms.php" class="dropdown-item">Nire galderak ikusi</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="../php/logout.php" class="dropdown-item" id="logout">Saioa itxi</a>
+                  <?php }
+                  else{ ?>
+                    <a href="../php/login.php" class="dropdown-item">Saioa hasi</a>
+                  <?php } ?>
                 </div>
               </li>
             </ul>

@@ -1,5 +1,6 @@
 <!DOCTYPE filmak[
 <!ELEMENT filma (izenburua, data, zuzendaria, generoa, iraupena, sinopsia, balorazioa, esteka)>
+<!ELEMENT egilea (#PCDATA)>
 <!ELEMENT izenburua (#PCDATA)>
 <!ELEMENT urtea (#PCDATA)>
 <!ELEMENT zuzendaria (#PCDATA)>

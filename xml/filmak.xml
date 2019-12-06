@@ -2,6 +2,7 @@
 <!DOCTYPE filmak SYSTEM "../dtd/filmak.dtd">
 <filmak>
   <filma>
+    <egilea>iosusanyt@gmail.com</egilea>
     <izenburua>The Joker</izenburua>
     <urtea>2019</urtea>
     <zuzendaria>Todd Phillips</zuzendaria>
@@ -12,6 +13,7 @@
     <esteka>https://www.youtube.com/embed/zAGVQLHvwOY</esteka>
   </filma>
   <filma>
+    <egilea>iosusanyt@gmail.com</egilea>
     <izenburua>Space Jam</izenburua>
     <urtea>1996</urtea>
     <zuzendaria>Joe Pytka</zuzendaria>

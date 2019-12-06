@@ -99,5 +99,4 @@
           });
         });
       </script>
-  </body>
-</html>
+<?php include "../php/footer.php" ?>
