@@ -1,8 +1,10 @@
 <?php
-include "../php/navbar.php";
+session_start();
+include "../php/DbConfig.php";
+$eposta = $_SESSION['eposta'];
 unset($_SESSION['eposta']);
 session_destroy();
 if(!isset($_SESSION['eposta'])){
-  echo "<div class='container'> <p> Sesioa zuzen amaitu duzu. </p> </div>";
+  header('Location: ../php/successLogout.php?eposta='.$eposta);
 }
- ?>
+?>

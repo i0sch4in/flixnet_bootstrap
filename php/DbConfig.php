@@ -3,7 +3,7 @@ $lokal=1; //0 hodeirako
 if ($lokal){
 	$zerbitzaria="localhost";
     $erabiltzailea="root";
-		$gakoa="5072";
+		$gakoa="";
     $db="Flixnet";
 }
 else{

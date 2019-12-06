@@ -38,7 +38,7 @@
                 window.location.replace("../php/successLogin.php?eposta="+email);
               }
             }
-          });
+        });
       })
     </script>
   </body>

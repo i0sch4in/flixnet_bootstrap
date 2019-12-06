@@ -50,7 +50,7 @@
                        ?> </span></a>
                 <div id="dropdownOptions" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <?php if(isset($_SESSION['eposta'])){
-                    echo '<a href="../php/logout.php" class="dropdown-item">Saioa itxi</a>';
+                    echo '<a href="../php/logout.php" class="dropdown-item" id="logout">Saioa itxi</a>';
                   }
                   else{
                     echo '<a href="../php/login.php" class="dropdown-item">Saioa hasi</a>';
