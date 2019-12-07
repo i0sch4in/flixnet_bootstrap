@@ -59,6 +59,7 @@
                   <?php }
                   else{ ?>
                     <a href="../php/login.php" class="dropdown-item">Saioa hasi</a>
+                    <a href="../php/register.php" class="dropdown-item">Erregistratu</a>
                   <?php } ?>
                 </div>
               </li>

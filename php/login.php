@@ -17,7 +17,8 @@
             <input type="password" name="pwd" id="pwd" class="form-control">
           </div>
         </div>
-        <button type="button" id="bidali" class="btn btn-danger">Bidali</button>
+        <p>Ez daukazu konturik? egin klik <a href="../php/register.php">hemen</a> erregistratzeko.</p>
+        <button type="button" id="bidali" class="btn btn-danger mb-3">Bidali</button>
       </form>
       <div id="mezua">
 

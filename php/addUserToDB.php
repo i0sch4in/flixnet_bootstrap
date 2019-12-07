@@ -14,10 +14,10 @@
       $sql = "INSERT INTO Users VALUES ('$_POST[eposta]' , '$_POST[nick]', '$_POST[pwd1]', '$_POST[data]')";
       $emaitza = mysqli_query($konexioa,$sql);
       if(!$emaitza){
-        die("<p class='text-danger'>Errorea erabiltzailea datu-basean sartzean.</p>");
+        die("<div class='container'><p class='text-danger'>Errorea erabiltzailea datu-basean sartzean.</p></div>");
       }
       else {
-        echo "<p>Zuzen erregistratu zara, sesioa hasteko egin klik <a href='../php/login.php'>hemen</a>.</p>";
+        echo "<div class='container'><p>Zuzen erregistratu zara, sesioa hasteko egin klik <a href='../php/login.php'>hemen</a>.</p></div>";
       }
     }
   }
