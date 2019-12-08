@@ -96,9 +96,7 @@
             else{
               $("#mezua").html("");
             }
-          });
-          $(".form-control").change(function(){
-            if(($("#mezua").html() == "")){
+            if(($("#mezua").html() == "") && !anyFieldEmpty()){
               $("#bidali").prop("disabled", false);
             }
             else{
@@ -106,7 +104,17 @@
             }
           });
         });
-
+        //returns true if any input field is empty
+        function anyFieldEmpty(){
+          var empty = false;
+          $(":input[type=text], :input[type=number], textarea").each(function() {
+              if($.trim($(this).val()) === ''){
+                empty = true;
+                return false;
+              }
+          });
+          return empty;
+        }
       </script>
   </body>
 </html>
