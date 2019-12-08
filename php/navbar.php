@@ -26,7 +26,7 @@
       </div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-4">
           <div class="container">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav h5">
               <!-- <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>

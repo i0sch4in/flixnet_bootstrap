@@ -73,7 +73,7 @@
             }
           });
           $("#eposta").keyup(function(){
-            var emailRegex = new RegExp('[^@]+@[^\.]+\..+');
+            var emailRegex = new RegExp('[^@]+@[^\\.]+\\..+');
             if(!emailRegex.test($("#eposta").val())){
               $("#mezua").html("<p class='text-danger'>e-posta ez da zuzena.</p>");
             }
