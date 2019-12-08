@@ -89,14 +89,27 @@
               $("#mezua").html("");
             }
           });
-          $(".form-control").keyup(function(){
-            if($("#mezua").html() == ""){
+          $(".form-control").change(function(){ //change, keyup-ekin bestela ez du detektatzen
+            //errorerik ez badago eta dena beteta badago, botoia aktibatu
+            if(($("#mezua").html() == "") && !anyFieldEmpty()){
               $("#bidali").prop("disabled", false);
             }
+            //bestela, botoia desaktibatu
             else{
               $("#bidali").prop("disabled", true);
             }
           });
         });
+        //returns true if any input field is empty
+        function anyFieldEmpty(){
+          var empty = false;
+          $(":input[type=text], :input[type=password], :input[type=date]").each(function() {
+              if($.trim($(this).val()) === ''){
+                empty = true;
+                return false;
+              }
+          });
+          return empty;
+        }
       </script>
 <?php include "../php/footer.php" ?>
