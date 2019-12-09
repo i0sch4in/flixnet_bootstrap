@@ -80,7 +80,7 @@
       <script type="text/javascript">
         $(document).ready(function(){
           $("#urtea").change(function(){
-            var yearRegex = new RegExp("1(8|9)[0-9]{2}");
+            var yearRegex = new RegExp("^((20)|1(8|9))[0-9]{2}");
             if(!yearRegex.test($("#urtea").val())){
               $("#mezua").html("<p class='text-danger'>Urtea ez da zuzena.</p>");
             }
@@ -116,5 +116,4 @@
           return empty;
         }
       </script>
-  </body>
-</html>
+<?php include "../php/footer.php" ?>
