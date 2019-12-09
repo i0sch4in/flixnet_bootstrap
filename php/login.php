@@ -36,7 +36,7 @@
                 $('#mezua').html("<p class='text-danger'><span class='font-weight-bold'>ERROREA: </span>Erabiltzailea eta pasahitza ez datoz bat.</p>");
               }
               else{
-                window.location.replace("../php/successLogin.php?eposta="+email);
+                window.location.replace("../php/showFilms.php");
               }
             }
         });

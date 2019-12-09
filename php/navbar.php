@@ -21,9 +21,11 @@
   </head>
   <body>
     <div class="jumbotron bg-dark">
+      <a href="../php/showFilms.php">
       <div class="row justify-content-center">
         <img src="../img/netflix-seeklogo.svg" alt="netflix-title">
       </div>
+      </a>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-4">
           <div class="container">
             <ul class="navbar-nav h5">
