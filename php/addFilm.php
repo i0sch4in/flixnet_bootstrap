@@ -89,9 +89,9 @@
             }
           });
           $("#esteka").change(function(){
-            var linkRegex = new RegExp('https://www.youtube.com/embed/.{4,}');
+            var linkRegex = new RegExp('http(?:s?):\\/\\/(?:www\\.)?youtu(?:be\\.com\\/watch\\?v=|\\.be\\/)([\\w\\-\\_]*)(&(amp;)?‌​[\\w\\?‌​=]*)?');
             if(!linkRegex.test($("#esteka").val())){
-              $("#mezua").html("<p class='text-danger'>Estekak ez dauka formatu egokia. Ziurtatu embed motakoa sartzen ari zarela</p>");
+              $("#mezua").html("<p class='text-danger'>Esteka ez da youtubeko</p>");
             }
             else{
               $("#mezua").html("");

@@ -24,7 +24,8 @@ include "../php/navbar.php";
               html += "</ul> </p>";
               html += "</div>";
               html += "<div class='col-md-4'>";
-              html += '<iframe class="embed-responsive-item" src="' + $(this).find("esteka").text() + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+              var link = getEmbedLink($(this).find("esteka").text());
+              html += '<iframe class="embed-responsive-item" src="' + link + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
               html += "</div></div>";
               html += "<div class='row'>";
               html += "<p>" + $(this).find("sinopsia").text() + "</p>";
@@ -37,5 +38,10 @@ include "../php/navbar.php";
           }
       });
     });
+    function getEmbedLink(raw_url){
+      var parts = raw_url.split("/");
+      var code = parts[parts.length-1];
+      return "https://www.youtube.com/embed/" + code;
+    }
     </script>
 <?php include "../php/footer.php" ?>
